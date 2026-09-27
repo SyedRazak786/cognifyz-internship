@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f9; display: flex; justify-content: center; padding: 40px; }
+    .card { background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); width: 100%; max-width: 420px; }
+    h1 { color: #4CAF50; }
+    p { margin: 8px 0; }
+    a { display: inline-block; margin-top: 16px; color: #4CAF50; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Thank you, <%= entry.name %>!</h1>
+    <p><strong>Email:</strong> <%= entry.email %></p>
+    <p><strong>Message:</strong> <%= entry.message || '(none)' %></p>
+    <p><strong>Submitted:</strong> <%= entry.submittedAt %></p>
+    <a href="/">&larr; Back to form</a>
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* Task 3: Advanced CSS Styling and Responsive Design */
+
+.accent { color: #ffc107; }
+
+.hero {
+  min-height: 70vh;
+  background: linear-gradient(135deg, #2c3e50, #4b6cb7);
+  background-size: 200% 200%;
+  animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.feature-card {
+  border: none;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+}
+
+.icon-circle {
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border-radius: 50%;
+  background: #f0f4ff;
+  font-size: 28px;
+  margin: 0 auto;
+}
+
+.grid-box {
+  height: 120px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  transition: transform 0.25s ease;
+}
+.grid-box:hover { transform: scale(1.05); }
+
+.box-1 { background: #ff6b6b; }
+.box-2 { background: #4ecdc4; }
+.box-3 { background: #ffd93d; color: #333; }
+.box-4 { background: #6c5ce7; }
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero p { font-size: 1rem; }
+}

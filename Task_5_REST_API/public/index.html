@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Task 5 - REST API Front-End</title>
+<style>
+  body { font-family: Arial, sans-serif; background:#f4f6f9; display:flex; justify-content:center; padding:40px; }
+  .box { background:#fff; padding:26px; border-radius:10px; box-shadow:0 2px 10px rgba(0,0,0,0.08); width:100%; max-width:480px; }
+  h1 { font-size:22px; color:#2c3e50; }
+  .add-row { display:flex; gap:8px; margin-top:16px; }
+  .add-row input { flex:1; padding:9px; border:1px solid #ccc; border-radius:5px; }
+  .add-row button { padding:9px 14px; border:none; background:#3498db; color:#fff; border-radius:5px; cursor:pointer; }
+  ul { list-style:none; padding:0; margin-top:20px; }
+  li { display:flex; align-items:center; justify-content:space-between; background:#f8f9fb; padding:10px 12px; border-radius:6px; margin-bottom:8px; }
+  li.done span { text-decoration: line-through; color:#999; }
+  li .actions button { margin-left:6px; border:none; padding:5px 9px; border-radius:4px; cursor:pointer; }
+  .btn-toggle { background:#2ecc71; color:#fff; }
+  .btn-delete { background:#e74c3c; color:#fff; }
+  #status { font-size:13px; color:#888; margin-top:10px; }
+</style>
+</head>
+<body>
+  <div class="box">
+    <h1>My Tasks (REST API demo)</h1>
+    <div class="add-row">
+      <input id="newTitle" type="text" placeholder="New task title...">
+      <button id="addBtn">Add</button>
+    </div>
+    <ul id="taskList"></ul>
+    <div id="status">Loading tasks...</div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

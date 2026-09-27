@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Signed Up</title></head>
+<body style="font-family: Arial, sans-serif; background:#eef1f5; display:flex; justify-content:center; padding:40px;">
+  <div style="background:#fff; padding:30px; border-radius:10px; box-shadow:0 4px 12px rgba(0,0,0,0.12); width:100%; max-width:440px; text-align:center;">
+    <h1 style="color:#27ae60;">Welcome, <%= record.username %>!</h1>
+    <p style="color:#555;">Your account was validated and stored (record #<%= record.id %>, total accounts: <%= total %>).</p>
+    <p><a href="/" style="color:#3498db; text-decoration:none;">&larr; Back to form</a> &nbsp;|&nbsp;
+       <a href="/storage" style="color:#3498db; text-decoration:none;">View raw storage (JSON)</a></p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f9; padding: 40px; }
+    table { width: 100%; max-width: 700px; margin: 0 auto; border-collapse: collapse; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    th, td { padding: 10px; border-bottom: 1px solid #eee; text-align: left; }
+    th { background: #4CAF50; color: #fff; }
+    a { display: block; text-align: center; margin-top: 16px; color: #4CAF50; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <h1 style="text-align:center;"><%= title %></h1>
+  <table>
+    <tr><th>#</th><th>Name</th><th>Email</th><th>Message</th><th>Time</th></tr>
+    <% submissions.forEach(function(s) { %>
+      <tr>
+        <td><%= s.id %></td>
+        <td><%= s.name %></td>
+        <td><%= s.email %></td>
+        <td><%= s.message %></td>
+        <td><%= s.submittedAt %></td>
+      </tr>
+    <% }) %>
+  </table>
+  <a href="/">&larr; Back to form</a>
+</body>
+</html>
